@@ -8,8 +8,20 @@ const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
+  // Debug: Check current state
+  React.useEffect(() => {
+    console.log('Current theme:', theme);
+    console.log('HTML class list:', document.documentElement.classList);
+    console.log('Has dark class:', document.documentElement.classList.contains('dark'));
+  }, [theme]);
+
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const handleThemeToggle = () => {
+    console.log('Toggling theme. Current:', theme);
+    toggleTheme();
   };
 
   return (
@@ -53,12 +65,11 @@ const Header: React.FC = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={toggleTheme}
+              onClick={handleThemeToggle}
               icon={theme === 'light' ? Moon : Sun}
               className="w-12 h-12 p-0"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
-              {/* Empty children to satisfy TypeScript */}
               <span className="sr-only">
                 {theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
               </span>

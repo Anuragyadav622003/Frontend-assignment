@@ -77,7 +77,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, index }) =>
         animate={{ opacity: isHovered ? 1 : 0.7 }}
         className="flex gap-2 justify-end"
       >
-        {/* FIX: Use Link for View button */}
+      
         <Link to={`/users/${user.id}`}>
           <Button
             variant="ghost"

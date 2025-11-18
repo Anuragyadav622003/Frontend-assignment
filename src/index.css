@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -26,18 +26,18 @@
   background: #64748b;
 }
 
-/* Smooth transitions for theme switching */
+
 * {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-/* Focus styles for accessibility */
+
 .focus-ring:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Animation for skeleton loading */
+
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
