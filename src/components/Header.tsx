@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               size="sm"
               onClick={toggleTheme}
               icon={theme === 'light' ? Moon : Sun}
-              className="w-12 h-12 !p-0"
+              className="w-12 h-12 p-0"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
               {/* Empty children to satisfy TypeScript */}

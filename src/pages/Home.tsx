@@ -8,12 +8,13 @@ import SearchFilters from '../components/SearchFilters';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Button from '../components/ui/Button';
 import { Plus, Users } from 'lucide-react';
-import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const { users, allUsers, loading, error, updateUser, deleteUser, filters, updateFilters, exportUsers } = useUsers();
   const [editingUser, setEditingUser] = useState<User | null>(null);
   const [showEditForm, setShowEditForm] = useState(false);
+  const navigate = useNavigate();
 
   const handleEdit = (user: User) => {
     setEditingUser(user);
@@ -35,9 +36,8 @@ const Home: React.FC = () => {
       await deleteUser(id);
     }
   };
-
-  const handleView = (user: User) => {
-    // Navigation will be handled by the Link in UserCard
+ const handleView = (user: User) => {
+    navigate(`/users/${user.id}`);
   };
 
   const handleCancelEdit = () => {

@@ -13,7 +13,7 @@ interface UserCardProps {
   index: number;
 }
 
-const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, onView, index }) => {
+const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, index }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (

@@ -52,7 +52,7 @@ const UserDetail: React.FC = () => {
 
       <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
         {/* Header Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
+        <div className="bg-linear-to-r from-blue-600 to-purple-600 p-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center gap-6">
             <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center text-2xl font-bold backdrop-blur-sm">
               {user.name.split(' ').map(n => n[0]).join('')}
@@ -76,7 +76,7 @@ const UserDetail: React.FC = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                  <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
                     <a 
@@ -89,7 +89,7 @@ const UserDetail: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                  <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
                     <a 
@@ -103,7 +103,7 @@ const UserDetail: React.FC = () => {
 
                 {user.website && (
                   <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                    <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                    <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                     <div>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Website</p>
                       <a 
@@ -129,7 +129,7 @@ const UserDetail: React.FC = () => {
               <div className="space-y-4">
                 {user.address && (
                   <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                    <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
                     <div>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>
                       <p className="text-gray-900 dark:text-white">
@@ -147,7 +147,7 @@ const UserDetail: React.FC = () => {
 
                 {user.company && (
                   <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                    <Building className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+                    <Building className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
                     <div>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Company</p>
                       <p className="text-gray-900 dark:text-white font-semibold">{user.company.name}</p>
@@ -166,7 +166,7 @@ const UserDetail: React.FC = () => {
                 )}
 
                 <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                  <Calendar className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                  <Calendar className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">User ID</p>
                     <p className="text-gray-900 dark:text-white font-mono">#{user.id}</p>
